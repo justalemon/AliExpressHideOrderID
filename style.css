@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name        AliExpress - Hide Order ID
+@namespace   https://github.com/justalemon/AliExpressHideOrderID
+@description A simple User Style for hidding the AliExpress Order ID until you hover it.
+@version     1.0
+@license     MIT
+@author      Hannele Ruiz
+@homepageURL https://github.com/justalemon/AliExpressHideOrderID
+@supportURL  https://github.com/justalemon/AliExpressHideOrderID/issues
+==/UserStyle== */
+
+@-moz-document regexp("https?://[a-z]{1,5}?.aliexpress.com/p/order/index.html.*") {
+    .order-item-header-right-info > div:nth-child(2) {
+        filter: blur(7px);
+    }
+
+    .order-item-header-right-info > div:nth-child(2):hover {
+        filter: none;
+        transition: all 0.25s ease-out;
+    }
+}
