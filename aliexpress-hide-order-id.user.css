@@ -20,3 +20,14 @@
         transition: all 0.25s ease-out;
     }
 }
+
+@-moz-document regexp("https?://www.aliexpress.com/p/tracking/index.html.*") {
+    .logistic-info-v2--mailNoValue--X0fPzen {
+        filter: blur(7px);
+    }
+
+    .logistic-info-v2--mailNoValue--X0fPzen:hover {
+        filter: none;
+        transition: all 0.25s ease-out;
+    }
+}
