@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name        AliExpress - Hide Order ID
+@name        AliExpress - Hide Sensitive Information
 @namespace   itslemonchan.com
-@description A simple User Style for hidding the AliExpress Order ID until you hover it.
+@description A simple User Style for hidding the AliExpress Order ID and Address until you hover it.
 @version     1.0
 @license     MIT
 @author      Hannele Ruiz
@@ -22,11 +22,11 @@
 }
 
 @-moz-document regexp("https?://www.aliexpress.com/p/tracking/index.html.*") {
-    .logistic-info-v2--mailNoValue--X0fPzen {
+    .logistic-info-v2--mailNoValue--X0fPzen, .logistic-info-v2--shippingToInfo--2EVYXo8 {
         filter: blur(7px);
     }
 
-    .logistic-info-v2--mailNoValue--X0fPzen:hover {
+    .logistic-info-v2--mailNoValue--X0fPzen:hover, .logistic-info-v2--shippingToInfo--2EVYXo8:hover {
         filter: none;
         transition: all 0.25s ease-out;
     }
