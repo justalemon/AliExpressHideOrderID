@@ -31,3 +31,25 @@
         transition: all 0.25s ease-out;
     }
 }
+
+@-moz-document regexp("https?://www.aliexpress.com/p/order/detail.html.*") {
+    .order-detail-info-left > .order-detail-info-item > .order-detail-info-content {
+        filter: blur(7px);
+    }
+
+    .order-detail-info-left > .order-detail-info-item > .order-detail-info-content:hover {
+        filter: none;
+        transition: all 0.25s ease-out;
+    }
+}
+
+@-moz-document regexp("https?://www.aliexpress.com/p/order/detail.html.*") {
+    .order-detail-info-left > .order-detail-info-item > .order-detail-info-content, .order-detail-info-item > .order-detail-info-content > .info-row:nth-child(1) {
+        filter: blur(7px);
+    }
+
+    .order-detail-info-left > .order-detail-info-item > .order-detail-info-content:hover, .order-detail-info-item > .order-detail-info-content > .info-row:nth-child(1):hover {
+        filter: none;
+        transition: all 0.25s ease-out;
+    }
+}
